@@ -1,0 +1,12 @@
+{
+    "setup": [
+      "python3 --version",
+      "pip install --upgrade pip",
+      "pip install regex"
+    ],
+    "env": {
+      "AI_ENFORCEMENT_MODE": "solo"
+    }
+  }
+  
+  
