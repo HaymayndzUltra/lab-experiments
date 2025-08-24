@@ -1,0 +1,4 @@
+memory-bank/entries/*
+!memory-bank/.gitkeep
+.cursor/rules/harvested/*
+.cursor/rules/reviewed/*

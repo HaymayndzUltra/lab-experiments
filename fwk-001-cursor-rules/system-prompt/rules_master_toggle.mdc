@@ -1,0 +1,207 @@
+# rules_master_toggle.mdc
+--------------------------------------------------
+title:        "RULES_MASTER_TOGGLE  —  v0.1.0"
+description:  "Central role activation control and routing matrix"
+owner:        "RULES_MASTER_TOGGLE"
+phases:       "Orchestration"
+--------------------------------------------------
+## 1. PURPOSE
+• Controls which AI roles are active and available for execution
+• Manages routing of commands to appropriate role handlers
+• Provides centralized configuration for framework behavior
+
+# Output Artifact
+- roles_status.json: current enabled/disabled roles and priority
+- routing_matrix.json: effective command routing map
+
+## 2. TOGGLE DEFAULTS & POLICY
+```yaml
+[TOGGLES]
+HARVESTED_RULES_ENABLED = DISABLED
+REVIEWED_RULES_ENABLED  = ENABLED
+
+[POLICY]
+- When HARVESTED_RULES_ENABLED == DISABLED: harvested rules are quarantined (not auto-attached).
+- Only files under .cursor/rules/reviewed/** are considered for hydration/promotion.
+```
+
+## 3. ROLE ACTIVATION MATRIX
+```yaml
+# Core Roles (Foundation & Execution)
+roles:
+  product_owner_ai:
+    enabled: true
+    priority: 1
+    triggers: ["/backlog", "/prioritize", "/refine"]
+    dependencies: []
+    
+  planning_ai:
+    enabled: true
+    priority: 2
+    triggers: ["/plan", "/architect", "/estimate"]
+    dependencies: ["product_owner_ai"]
+    
+  codegen_ai:
+    enabled: true
+    priority: 3
+    triggers: ["/gen_code", "/implement", "/refactor"]
+    dependencies: ["planning_ai"]
+    
+  qa_ai:
+    enabled: true
+    priority: 4
+    triggers: ["/test", "/review", "/validate"]
+    dependencies: ["codegen_ai"]
+    
+  mlops_ai:
+    enabled: true
+    priority: 5
+    triggers: ["/deploy", "/rollback", "/scale"]
+    dependencies: ["qa_ai"]
+
+# Support Roles
+  documentation_ai:
+    enabled: true
+    priority: 6
+    triggers: ["/docs", "/update_docs", "/validate_docs"]
+    dependencies: ["codegen_ai"]
+    
+  analyst_ai:
+    enabled: true
+    priority: 7
+    triggers: ["/review", "/analyze", "/benchmark"]
+    dependencies: []
+    
+  memory_ai:
+    enabled: true
+    priority: 8
+    triggers: ["/snapshot", "/recall", "/learn"]
+    dependencies: []
+    
+  observability_ai:
+    enabled: true
+    priority: 9
+    triggers: ["/observe", "/alert", "/health"]
+    dependencies: ["mlops_ai"]
+
+# Orchestration Roles
+  execution_orchestrator:
+    enabled: true
+    priority: 0
+    triggers: ["/run_pipeline", "/status", "/halt"]
+    dependencies: []
+    
+  prompt_factory_ai:
+    enabled: true
+    priority: 10
+    triggers: ["/new_framework", "/extend_framework", "/template"]
+    dependencies: []
+
+  auditor_ai:
+    enabled: true
+    priority: 15
+    triggers: ["/audit"]
+    dependencies: ["planning_ai"]   # audit usually runs after a plan is produced
+
+  principal_engineer_ai:
+    enabled: true
+    priority: 16
+    triggers: ["/peer_review", "/synthesize_plan"]
+    dependencies: ["auditor_ai"]   # runs only after audit report exists
+
+
+# Optional Roles (disabled by default)
+  security_ai:
+    enabled: true
+    priority: 11
+    triggers: ["/security_scan", "/threat_model", "/compliance_check"]
+    dependencies: ["codegen_ai"]
+    
+  l10n_i18n_ai:
+    enabled: true
+    priority: 12
+    triggers: ["/l10n_setup", "/generate_templates", "/validate_locale"]
+    dependencies: ["documentation_ai"]
+    
+  prompt_linter_ai:
+    enabled: true
+    priority: 13
+    triggers: ["/lint_prompts", "/check_style", "/suggest_improvements"]
+    dependencies: []
+    
+  data_ai:
+    enabled: true
+    priority: 14
+    triggers: ["/design_schema", "/create_migration", "/optimize_queries"]
+    dependencies: ["planning_ai"]
+
+  planner_moderator_ai:
+    enabled: true
+    priority: 17
+    triggers: ["/planner_mode"]
+    dependencies: []
+```
+
+## 4. ROUTING MATRIX
+```yaml
+# Command routing based on triggers
+command_routing:
+  "/backlog":           "product_owner_ai"
+  "/prioritize":        "product_owner_ai"
+  "/refine":           "product_owner_ai"
+  "/plan":             "planning_ai"
+  "/architect":        "planning_ai"
+  "/estimate":         "planning_ai"
+  "/gen_code":         "codegen_ai"
+  "/implement":        "codegen_ai"
+  "/refactor":         "codegen_ai"
+  "/test":             "qa_ai"
+  "/review":           "analyst_ai"  # Default to analyst_ai, can delegate
+  "/validate":         "qa_ai"
+  "/deploy":           "mlops_ai"
+  "/rollback":         "mlops_ai"
+  "/scale":            "mlops_ai"
+  "/docs":             "documentation_ai"
+  "/update_docs":      "documentation_ai"
+  "/validate_docs":    "documentation_ai"
+  "/analyze":          "analyst_ai"
+  "/benchmark":        "analyst_ai"
+  "/snapshot":         "memory_ai"
+  "/recall":           "memory_ai"
+  "/learn":            "memory_ai"
+  "/observe":          "observability_ai"
+  "/alert":            "observability_ai"
+  "/health":           "observability_ai"
+  "/run_pipeline":     "execution_orchestrator"
+  "/status":           "execution_orchestrator"
+  "/halt":             "execution_orchestrator"
+  "/new_framework":    "prompt_factory_ai"
+  "/extend_framework": "prompt_factory_ai"
+  "/template":         "prompt_factory_ai"
+  "/toggle":           "rules_master_toggle"
+  "/design_schema":     "data_ai"
+  "/create_migration":  "data_ai"
+  "/optimize_queries":  "data_ai"
+  "/security_scan":     "security_ai"
+  "/threat_model":      "security_ai"
+  "/compliance_check":  "security_ai"
+  "/planner_mode":     "planner_moderator_ai"
+  
+```
+
+## 5. INTERACTION RULES
+• Triggers that activate this role:
+  - /toggle <role> on|off: Enable/disable specific roles
+  - /status: Show current role activation status
+  - /route <command>: Show which role handles a command
+• Allowed verbs or commands: TOGGLE, STATUS, ROUTE, CONFIGURE
+• Single-writer policy: yes (owns role configuration)
+
+## 6. INTERNAL CHECKLIST / TODO
+[ ] Fill domain-specific details  
+[ ] Add example conversation snips  
+[ ] Remove TODO markers before production  
+
+## 7. CHANGELOG
+‑ v0.1.0  2024-01-15  initial scaffold by prompt_factory_ai
+--------------------------------------------------

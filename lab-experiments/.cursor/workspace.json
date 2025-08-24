@@ -1,0 +1,341 @@
+{
+  "main": {
+    "id": "47531a6d3fde14a3",
+    "type": "split",
+    "children": [
+      {
+        "id": "10afb62a6a66fd81",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "55aa9edf1cd22907",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "README.md",
+                "mode": "source",
+                "source": true
+              },
+              "icon": "lucide-file",
+              "title": "README"
+            }
+          },
+          {
+            "id": "5ee669b0229d14cb",
+            "type": "leaf",
+            "state": {
+              "type": "smart-release-notes-view",
+              "state": {},
+              "icon": "file-text",
+              "title": "Release Notes"
+            }
+          },
+          {
+            "id": "d122d2b62c0c4416",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "cursor_rules/autopilot-next-phase.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "autopilot-next-phase"
+            }
+          },
+          {
+            "id": "a521bf1340b7ce4c",
+            "type": "leaf",
+            "state": {
+              "type": "smart-chat-view",
+              "state": {},
+              "icon": "smart-chat",
+              "title": "Smart Chat"
+            }
+          },
+          {
+            "id": "c1576c1e345166c0",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "cursor_rules/autopilot-next-phase.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "autopilot-next-phase"
+            }
+          },
+          {
+            "id": "c0cf72fc0f616b33",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "system-prompt/DEPENDENCY_DOCKER_OPTIMIZER.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "DEPENDENCY_DOCKER_OPTIMIZER"
+            }
+          },
+          {
+            "id": "6a0aef68e327ea42",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "NEEDTOSTUDY/GOAL/CHECKLIST.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "CHECKLIST"
+            }
+          },
+          {
+            "id": "00772abeaa3202f4",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "cursor_rules/autopilot-next-phase.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "autopilot-next-phase"
+            }
+          }
+        ],
+        "currentTab": 3
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "2d78607aa5abeea5",
+    "type": "split",
+    "children": [
+      {
+        "id": "6b46fd3cbb429a9e",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "980079eb72dfc939",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "7c302807c8e5c7ed",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "a0c04b9e55e5392c",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 200
+  },
+  "right": {
+    "id": "0ef7899b972379f0",
+    "type": "split",
+    "children": [
+      {
+        "id": "eda03bbecd3a89f5",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "2d0de2e940b28f37",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "cursor_rules/autopilot-next-phase.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for autopilot-next-phase"
+            }
+          },
+          {
+            "id": "6edae84b2ed28762",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "cursor_rules/autopilot-next-phase.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from autopilot-next-phase"
+            }
+          },
+          {
+            "id": "ad69ca7297a46a28",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "a85cdcf5d4d7cb4d",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "cursor_rules/autopilot-next-phase.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of autopilot-next-phase"
+            }
+          },
+          {
+            "id": "eda74f7ae811f382",
+            "type": "leaf",
+            "state": {
+              "type": "footnotes",
+              "state": {
+                "file": "cursor_rules/autopilot-next-phase.md"
+              },
+              "icon": "lucide-ghost",
+              "title": "footnotes"
+            }
+          },
+          {
+            "id": "f3a8c1e2208a3f6c",
+            "type": "leaf",
+            "state": {
+              "type": "calendar",
+              "state": {},
+              "icon": "calendar-with-checkmark",
+              "title": "Calendar"
+            }
+          },
+          {
+            "id": "b906bab00be8e7c3",
+            "type": "leaf",
+            "state": {
+              "type": "smart-connections-view",
+              "state": {},
+              "icon": "smart-connections",
+              "title": "Connections"
+            }
+          }
+        ],
+        "currentTab": 6
+      }
+    ],
+    "direction": "horizontal",
+    "width": 385.5
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false,
+      "obsidian-excalidraw-plugin:New drawing": false,
+      "templater-obsidian:Templater": false,
+      "table-editor-obsidian:Advanced Tables Toolbar": false,
+      "obsidian-kanban:Create new board": false,
+      "obsidian-git:Open Git source control": false,
+      "smart-connections:Open: Smart Chat": false,
+      "smart-connections:Smart Connections: Open connections view": false,
+      "smart-connections:Smart Connections: Open random connection": true
+    }
+  },
+  "active": "a521bf1340b7ce4c",
+  "lastOpenFiles": [
+    "system-prompt/DEPENDENCY_DOCKER_OPTIMIZER.md",
+    "cursor_rules/autopilot-next-phase.md",
+    "NEEDTOSTUDY/GOAL/CHECKLIST.md",
+    "system-prompt/REVIEWER_B.md",
+    "system-prompt/TEST_ARCHITECH.md",
+    "system-prompt/REVIEWER_A.md",
+    "system-prompt/PLANNER.md",
+    "system-prompt/MEMORY-PARITY-AUDITOR.md",
+    "system-prompt/EXECUTOR.md",
+    "scripts1/workflow_memory_intelligence_fixed.py",
+    "scripts1/Untitled.md",
+    "scripts1/todo_manager.py",
+    "scripts1/task_state_manager.py",
+    "scripts1/task_interruption_manager.py",
+    "scripts1/task_command_center.py",
+    "scripts1/setup_memory_mcp.py",
+    "scripts1/plan_next.py",
+    "scripts1/plain_hier.py",
+    "scripts1/cursor_session_manager.py",
+    "scripts1/cursor_memory_bridge.py",
+    "README.md",
+    "Untitled.md",
+    "frameworks/fwk-001-cursor-rules/README.md",
+    "frameworks/fwk-001-cursor-rules/LAB_NOTES.md",
+    "system-prompt/Planner/TEST_ARCHITECH.md",
+    "system-prompt/Planner/DEPENDENCY_DOCKER_OPTIMIZER.md",
+    "system-prompt/Planner/MEMORY-PARITY-AUDITOR.md",
+    "system-prompt/Planner/MEMORT-PARITY-AUDITOR.md",
+    "system-prompt/Planner/MEMORY/PARITY_AUDITOR.md",
+    "system-prompt/Planner/REVIEWER_B.md",
+    "system-prompt/Planner/REVIEWER_A.md",
+    "system-prompt/Planner/EXECUTOR.md",
+    "system-prompt/Planner/PLANNER.md",
+    "system-prompt/Planner/Decomposer (SYSTEM prompt).md",
+    "dafadfadf.md"
+  ]
+}
